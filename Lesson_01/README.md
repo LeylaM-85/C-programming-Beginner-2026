@@ -7,7 +7,12 @@
 ---
 ### Dərs və Ev tapşırığı Linkləri
 
-* [Cprog_dərs_01](https://drive.google.com/drive/folders/12Czcl1kkkOeRA_mVeZKuDUptpCtI6Qhd?usp=sharing)
+* **[Cprog_dərs_01 material]**(https://drive.google.com/drive/folders/12Czcl1kkkOeRA_mVeZKuDUptpCtI6Qhd?usp=sharing)
+
+* **[Ev tapşırığı]**(https://classroom.github.com/a/ZnIe6yDz)
+
+  
+
 
 
 ## 📖 1. C Dilinin İcmalı və Tarixi

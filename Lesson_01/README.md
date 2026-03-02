@@ -9,7 +9,7 @@
 
 * **[Cprog_dərs_01 material]**(https://drive.google.com/drive/folders/12Czcl1kkkOeRA_mVeZKuDUptpCtI6Qhd?usp=sharing)
 
-* **[Ev tapşırığı]**(https://classroom.github.com/a/ZnIe6yDz)
+* **[Ev tapşırığı_dərs_01]**(https://classroom.github.com/a/ZnIe6yDz)
 
   
 ---

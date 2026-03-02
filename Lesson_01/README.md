@@ -1,9 +1,85 @@
-Budur sənin üçün hazırladığım optimallaşdırılmış struktur:🎓 C Proqramlaşdırma Dili: Mühazirə 1Universitet: Qərbi Kaspi UniversitetiMüəllim: Leyla MəmmədovaMövzu: C Proqramlaşdırmasına Giriş📖 1. C Dilinin İcmalı və Tarixi⏳ Tarixi Kontekst1972-ci il: Dennis Ritchie tərəfindən Bell Laboratories-də yaradılmışdır.Məqsəd: UNIX əməliyyat sistemini yazmaq üçün inkişaf etdirilmişdir.Sələfi: B dili (Ken Thompson tərəfindən yaradılmış).Təsiri: Bir çox müasir dillərin (C++, Java, C#, Python) əsasını qoyub.✨ Niyə C?C dili həm yüksək, həm də aşağı səviyyəli proqramlaşdırma arasında bir körpüdür.🚀 Effektiv: Maşın koduna yaxın, yüksək performans.🌍 Portativ: Müxtəlif platformalarda asanlıqla işləyir.🔧 Güclü: Sistem səviyyəli (kernel, driver) proqramlaşdırma imkanı.🧩 Sadə: Cəmi 32 əsas açar sözü var.🛠 2. Əsas Xüsusiyyətlər və Tətbiq SahələriSahəTətbiq NümunələriSistem ProqramlaşdırmaLinux, Windows Kernel, Kompilyatorlar (GCC)Embedded SistemlərArduino, IoT cihazları, Avtomobil ABS sistemləriOyun ProqramlaşdırmaOyun mühərrikləri (Unreal Engine), Fizika simulyasiyalarıVerilənlər BazasıMySQL, PostgreSQL💻 3. İlk C Proqramı: "Salam Dünya!"C#include <stdio.h> // Standart giriş-çıxış kitabxanası
+Əlbəttə, birbaşa `README.md` faylının içərisinə yapışdıra biləcəyin tam mətni aşağıda təqdim edirəm. Bu format GitHub-da həm kodların rəngli görünməsini, həm də başlıqların səliqəli düzülməsini təmin edəcək.
+
+```markdown
+# 🎓 C Proqramlaşdırma Dili: Mühazirə 1
+
+**Universitet:** Qərbi Kaspi Universiteti
+**Müəllim:** Leyla Məmmədova
+**Fənn:** C proqramlaşdırma dili
+
+---
+
+## 📖 1. C Dilinin İcmalı və Tarixi
+
+### ⏳ Tarixi Kontekst
+* **1972-ci il:** Dennis Ritchie tərəfindən Bell Laboratories-də yaradılmışdır.
+* **Məqsəd:** UNIX əməliyyat sistemini yazmaq üçün inkişaf etdirilmişdir.
+* **Sələf:** B dili (Ken Thompson tərəfindən yaradılmış).
+* **Təsir:** Bir çox müasir dillərin əsasıdır (C++, Java, C#, Python).
+
+### ✨ Niyə C?
+* **Effektiv:** Maşın koduna yaxın, yüksək performans.
+* **Portativ:** Müxtəlif platformalarda işləyir.
+* **Güclü:** Sistem səviyyəli proqramlaşdırmaya imkan verir.
+* **Sadə:** Az sayda açar sözlər (32 ədəd).
+
+---
+
+## 🛠 2. Əsas Xüsusiyyətlər və Tətbiq Sahələri
+
+### 🚀 Əsas Xüsusiyyətlər
+1. **Strukturlu dil:** Modul və təşkil olunmuş kod.
+2. **Aşağı səviyyəli xüsusiyyətlər:** Göstəricilər, bit manipulyasiyası.
+3. **Zəngin kitabxana:** Standart C kitabxanası (libc).
+4. **Orta səviyyə dil:** Yüksək və aşağı səviyyə arasında körpü.
+
+### 📂 Tətbiq Sahələri
+* **Sistem Proqramlaşdırma:** Linux, Windows kernel, Kompilyatorlar.
+* **Embedded Sistemlər:** Mikrokontrollerlər (Arduino, ARM), IoT cihazları, Avtomobil sistemləri.
+* **Oyun Proqramlaşdırma:** Oyun mühərrikləri, Fizika simulyasiyaları.
+* **Digər:** Verilənlər bazası (MySQL, PostgreSQL), Şəbəkə proqramları.
+
+---
+
+## 💻 3. İlk C Proqramı: Salam Dünya!
+
+```c
+#include <stdio.h>
 
 int main() {
-    // Ekrana mətn çıxarmaq üçün istifadə olunur
     printf("Salam Dünya!\n");
-    
-    return 0; // Proqramın uğurla bitdiyini bildirir
+    return 0;
 }
-🔍 Kodun İzahı:#include <stdio.h>: printf() funksiyasını tanımaq üçün lazımdır.int main(): Proqramın giriş nöqtəsidir. Hər bir C proqramında mütləq olmalıdır.\n: Yeni sətir (newline) simvoludur.;: Əmrin bitdiyini bildirən terminator.⚙️ 4. Kompilyasiya ProsesiC kodunun icra oluna bilən (.exe) fayla çevrilməsi 4 mərhələdən keçir:Önişləmə (Preprocessing): #include və #define əmrləri icra olunur. (hello.i)Kompilyasiya (Compilation): Kod assembly dilinə çevrilir. (hello.s)Assemblə etmə (Assembly): Kod maşın dilinə (obyekt kodu) çevrilir. (hello.o)Linkerləmə (Linking): Kitabxanalar birləşdirilir və son .exe faylı yaranır.🐞 5. Debug Alətləri (GDB)Proqramdakı xətaları tapmaq üçün GDB (GNU Debugger) istifadə olunur.ƏmrFunksiyasıbreak mainProqramı main funksiyasında dayandırır.runProqramı icra etməyə başlayır.nextNövbəti sətirə keçir.print xx dəyişəninin cari dəyərini göstərir.Faydalı Məsləhətlər:
+
+```
+
+### 🔍 Kodun İzahı:
+
+* `#include <stdio.h>`: Preprocessor direktivi, `printf()` üçün lazımdır.
+* `int main()`: Proqramın başlanğıc nöqtəsi.
+* `\n`: Yeni sətir simvolu.
+* `return 0;`: Uğurlu icra kodu.
+
+---
+
+## ⚙️ 4. Kompilyasiya Prosesi
+
+C proqramının icra oluna bilən fayla çevrilməsi 4 mərhələdən ibarətdir:
+
+1. **Önişləmə (Preprocessing):** Header faylları daxil edilir, şərhlər silinir.
+2. **Kompilyasiya (Compilation):** C kodu assembly dilinə çevrilir.
+3. **Assemblə etmə (Assembly):** Assembly kodu maşın koduna (object code) çevrilir.
+4. **Linkerləmə (Linking):** Object faylları birləşdirilir və icra oluna bilən fayl yaradılır.
+
+---
+
+## 🐞 5. Debug Alətləri
+
+* **GDB (GNU Debugger):** Proqramı addım-addım izləmək və xətaları tapmaq üçün istifadə olunur.
+* **Valgrind:** Yaddaş sızmalarını aşkar etmək üçün (Linux).
+
+```
+
+Bunu kopyalayıb GitHub-da redaktə etdiyin hissəyə yapışdırsaın, "Commit changes" düyməsi aktivləşəcək. GitHub Classroom üçün tələbələrinə bu formatda tapşırıq hazırlamağımı istərdin?
+
+```

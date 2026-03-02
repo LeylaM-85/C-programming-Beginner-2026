@@ -12,7 +12,7 @@
 * **[Ev tapşırığı]**(https://classroom.github.com/a/ZnIe6yDz)
 
   
-
+---
 
 
 ## 📖 1. C Dilinin İcmalı və Tarixi

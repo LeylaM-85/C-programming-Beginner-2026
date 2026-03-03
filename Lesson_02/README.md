@@ -246,18 +246,3 @@ int main() {
 ```
 
 **İzah:** `enum` daxilindəki elementlər susmaya görə 0-dan başlayaraq nömrələnir. Bu, kodu daha oxunaqlı edir.
-
----
-
-### 5. Yaddaş Optimallaşdırması
-
-**Məqsəd:** Düzgün tip seçimi ilə yaddaşa qənaət etmək.
-
-**Sual:** 1000 tələbənin yaşını saxlamaq üçün hansı tip daha uyğundur?
-
-* **Variant A:** `int yas[1000];` -> $1000 \times 4 \text{ bayt} = 4000 \text{ bayt}$
-* **Variant B:** `unsigned char yas[1000];` -> $1000 \times 1 \text{ bayt} = 1000 \text{ bayt}$
-
-**Nəticə:** `unsigned char` seçməklə biz **3000 bayt (3 KB)** yaddaşa qənaət etmiş oluruq. Kiçik sistemlərdə və böyük datalarda bu çox vacibdir.
-
----

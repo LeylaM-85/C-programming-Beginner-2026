@@ -5,7 +5,6 @@
 Bu mühazirədə C dilində məlumatların yaddaşda necə saxlanılması, format spesifikatorları, yaddaş optimallaşdırması və tip dönüşümləri mövzularını əhatə edəcəyik.
 
 ---
----
 ## Dərs və Ev tapşırığı Linkləri
 
 * **[Cprog_dərs_02 material]**(https://drive.google.com/drive/folders/1NP0r29H28BjysdsI-hsgI6MEFBHEAJRr?usp=drive_link)
@@ -147,45 +146,19 @@ int main() {
 
 ## 🛠 Praktik Tapşırıqlar
 
-1. **Ölçü yoxlaması:** Bütün əsas tiplərin ölçüsünü `sizeof` ilə göstərən proqram yazın.
+1. **Ölçü yoxlaması:** Bütün əsas tiplərin ölçüsünü `sizeof` ilə göstərən proqram yazın. (QEYD: yuxarıda nümunə verilib.)
 2. **Dairə hesablama:** `const PI` istifadə edərək dairənin sahəsini ($S = \pi r^2$) hesablayın.
 3. **Tip dönüşümü:** 22-ni 7-yə bölərək həm tam hissəni, həm də kəsr nəticəni (3.14) ekrana çıxarın.
 4. **Enum tətbiqi:** İlin fəsillərini `enum` ilə yaradın və hər fəslə uyğun temperaturu çap edin.
 
 ---
-Hazırladığınız **README.md** faylını daha da təkmilləşdirərək, tələbələr üçün hər bir tapşırığın həm izahını, həm də həll kodunu (nümunə kimi) əlavə etdim. Bu, tələbələrin müstəqil işləyərkən mövzunu daha dərindən başa düşməsinə kömək edəcək.
-
----
-
-# 🛠 Praktik Tapşırıqlar və İzahlı Həllər
-
-Bu bölmədə Mühazirə 2-də öyrənilən mövzuların praktik tətbiqi göstərilmişdir.
-
----
+# 🛠 Praktik Tapşırıqların izahlı həlləri
 
 ### 1. Məlumat Tiplərinin Ölçüsü (`sizeof`)
 
 **Məqsəd:** Müxtəlif tiplərin yaddaşda tutduğu yeri baytlarla görmək.
 
-```c
-#include <stdio.h>
-
-int main() {
-    printf("--- Melumat Tiplerinin Olcusu ---\n");
-    printf("char:        %zu bayt\n", sizeof(char));
-    printf("int:         %zu bayt\n", sizeof(int));
-    printf("short:       %zu bayt\n", sizeof(short));
-    printf("long:        %zu bayt\n", sizeof(long));
-    printf("float:       %zu bayt\n", sizeof(float));
-    printf("double:      %zu bayt\n", sizeof(double));
-    printf("long double: %zu bayt\n", sizeof(long double));
-    
-    return 0;
-}
-
-```
-
-**İzah:** `sizeof` operatoru `size_t` tipində dəyər qaytardığı üçün `%zu` formatından istifadə edirik.
+**Qeyd:** `sizeof` operatoru `size_t` tipində dəyər qaytardığı üçün `%zu` formatından istifadə edirək tətbiq edin.
 
 ---
 
@@ -288,13 +261,5 @@ int main() {
 * **Variant B:** `unsigned char yas[1000];` -> $1000 \times 1 \text{ bayt} = 1000 \text{ bayt}$
 
 **Nəticə:** `unsigned char` seçməklə biz **3000 bayt (3 KB)** yaddaşa qənaət etmiş oluruq. Kiçik sistemlərdə və böyük datalarda bu çox vacibdir.
-
----
-
-**Tələbələr üçün qeyd:** Kodları `main.c` faylına kopyalayaraq terminalda `gcc main.c -o program` əmri ilə kompilyasiya edib yoxlaya bilərsiniz.
-
----
-
-Bu format tələbələriniz üçün həm dərslik, həm də tapşırıq bələdçisi rolunu oynayacaq. Başqa bir tapşırıq əlavə etmək və ya hər hansı hissəni sadələşdirmək istərdinizmi?
 
 ---

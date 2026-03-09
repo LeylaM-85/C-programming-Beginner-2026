@@ -1,6 +1,4 @@
-Təqdim etdiyiniz 150 sualı C proqramlaşdırma dilinin məntiqi ardıcıllığına (mövzuların çətinlik dərəcəsinə) əsasən aşağıdakı kimi qruplaşdırdım. Bu sıralama tələbələrin təməl anlayışlardan mürəkkəb strukturlara keçidini asanlaşdıracaq.
-
----
+C proqramlaşdırma dili
 
 ## 1. Səviyyə: Təməl Giriş-Çıxış və Riyazi Hesablamalar
 
@@ -130,5 +128,3 @@ Təqdim etdiyiniz 150 sualı C proqramlaşdırma dilinin məntiqi ardıcıllığ
 * **150.** `#ifdef DEBUG` istifadəsi.
 
 ---
-
-**Növbəti addım:** Bu suallardan hər hansı birinin həlli üçün kod nümunəsi və ya izahı lazımdırsa, buyurub soruşa bilərsiniz!

@@ -148,5 +148,3 @@ int main() {
 ```
 
 ---
-
-**Bu qayda ilə davam etməyimi istərdinizmi? Suallar çox olduğu üçün onları bu formatda hissə-hissə (məsələn, hər dəfə 10-15 sual) təqdim edə bilərəm.**

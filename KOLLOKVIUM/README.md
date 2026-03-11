@@ -19,3 +19,5 @@ Nümunə çıxış: Zaman: 09:05
 12. Tapşırıq: Bir mağaza proqramı tərtib edin. İstifadəçi məhsulun qiymətini (float) və aldığı məhsulun sayını (int) daxil etsin. Proqram ümumi məbləği hesablamalı və ekranda "Ödəniləcək məbləğ: X.XX AZN" formatında, yəni qəpiklər mütləq iki rəqəmlə göstərilməklə çap etməlidir.
 Nümunə giriş: Qiymət: 2.5, Say: 3
 Nümunə çıxış: Ödəniləcək məbləğ: 7.50 AZN
+13. Daxil edilmiş ad və soyadın uzunluğunu tapan proqram qrun.
+14. 

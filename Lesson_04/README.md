@@ -1,9 +1,5 @@
 # 📘 Mühazirə 4: C Dilində Operatorlar və İfadələrin Strateji Təhlili
 
-Bu mühazirə operatorların daxili iş mexanizmini, onların prosessor səviyyəsində əhəmiyyətini və alqoritmik sistemlərdəki rolunu əhatə edir.
-
----
-
 ## 1. Proqramlaşdırmada Operatorların Rolu
 
 Operatorlar proqramçının niyyətini prosessorun başa düşəcəyi aşağı səviyyəli əməliyyatlara (register manipulyasiyası, ALU fəaliyyəti) tərcümə edən **strateji körpü** rolunu oynayır. Düzgün seçilmiş operator strukturu kodun həm icra sürətini, həm də yaddaş effektivliyini birbaşa müəyyənləşdirir.
@@ -15,14 +11,8 @@ C dilində operatorlar funksional vəzifəsinə görə aşağıdakı strateji ka
 * **Arifmetik Operatorlar:** `+`, `-`, `*`, `/`, `%`.
 > ⚠️ **Qeyd:** Tam ədəd bölməsində (`/`) kəsr hissə atılır (*truncation*).
 
-
 * **Müqayisə Operatorları:** `==`, `!=`, `<`, `>`, `<=`, `>=`. Şərti keçid strukturlarının (if-else) mərkəzidir.
 * **Məntiqi Operatorlar:** `&&` (VƏ), `||` (VƏ YA), `!` (İNKAR).
-* *Short-circuit evaluation:* Əgər nəticə birinci operanddan məlumdursa, ikinci hesablanmır.
-
-
-* **Bitüstü (Bitwise) Operatorlar:** `&`, `|`, `^`, `~`, `<<`, `>>`. Yaddaş optimallaşdırılması və flag-lərin idarə olunması üçün.
-
 ---
 
 ## 3. Mənimsətmə və Artım Operatorları
@@ -67,14 +57,12 @@ Qiymətin dəyişmə zamanlamasına (side effect) görə iki forması var:
 Riyazi düsturların C koduna çevrilməsi zamanı operator prioritetləri mütləq nəzərə alınmalıdır.
 
 **Riyazi düstur:**
-
-
-$$x = \frac{-b + \sqrt{D}}{2a}$$
+$$m = \frac{a + b}{2}$$
 
 **C dilində yazılışı:**
 
 ```c
-x = (-b + sqrt(D)) / (2 * a);
+x = (a+b) / 2;
 
 ```
 
@@ -84,9 +72,3 @@ Düzgün nəticə çıxarmaq üçün format spesifikatorları dəqiq seçilməli
 
 * `int` üçün: `%d`
 * `float/double` üçün: `%f` (məs: `%.2f` - nöqtədən sonra 2 rəqəm)
-
----
-
-> **Nəticə:** Operatorlar üzərindəki mütləq nəzarət kodun həm riyazi doğruluğunu, həm də maşın səviyyəsində performansını təmin edir.
-
----

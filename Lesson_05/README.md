@@ -123,7 +123,8 @@ graph TD
     B -- Xeyr --> D{Qiymət >= 80?}
     D -- Bəli --> E[Nəticə: B]
     D -- Xeyr --> F[Nəticə: F]
-    style C fill:#d4edda,stroke:#155724  %% Yaşıl (Keçdi)
-    style E fill:#d4edda,stroke:#155724  %% Yaşıl (Keçdi)
-    style F fill:#f8d7da,stroke:#721c24  %% Qırmızı (Kəsildi)
+    
+    style C fill:#d4edda,stroke:#155724
+    style E fill:#d4edda,stroke:#155724
+    style F fill:#f8d7da,stroke:#721c24
     ```

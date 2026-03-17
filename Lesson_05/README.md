@@ -116,3 +116,11 @@ Dərsi mənimsəmək üçün aşağıdakı proqramları yazmağa çalışın:
 4. **Təqvim:** Daxil edilən ayın nömrəsinə görə günlərin sayını tapan proqram.
 
 ---
+```mermaid
+graph TD
+    A[İstifadəçi qiyməti daxil edir] --> B{Qiymət >= 90?}
+    B -- Bəli --> C[Nəticə: A]
+    B -- Xeyr --> D{Qiymət >= 80?}
+    D -- Bəli --> E[Nəticə: B]
+    D -- Xeyr --> F[Nəticə: F]
+    ```

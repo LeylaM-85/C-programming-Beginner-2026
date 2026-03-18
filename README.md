@@ -4,7 +4,7 @@ Bu repozitoriya **Western Caspian University** tələbələri üçün C proqraml
 
 ---
 
-**Müəllim:** Leyla Məmmədova
+**Müəllim:** Leyla Məmmədova 
 
 **Kafedra:** İnformasiya Texnologiyaları
 

@@ -21,3 +21,4 @@ Nümunə giriş: Qiymət: 2.5, Say: 3
 Nümunə çıxış: Ödəniləcək məbləğ: 7.50 AZN
 13. Daxil edilmiş ad və soyadın uzunluğunu tapan proqram qrun.
 14. Daxil edilmiş ad və soyadın uzunluğunu tapan proqram qrun.
+14. Daxil edilmiş ad və soyadın uzunluğunu tapan proqram qrun.

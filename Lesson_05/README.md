@@ -1,9 +1,5 @@
 # Mühazirə 5: İdarəetmə Operatorları (Hissə 1)
 
-Bu mühazirə C proqramlaşdırma dilində qərar qəbul etmə mexanizmlərini, şərt operatorlarını və seçim strukturunu əhatə edir.
-
-## 📋 Plan
-
 1. `if`, `if-else` və `else-if` ilə qərar qəbul etmə
 2. İç-içə (`Nested`) `if` operatorları
 3. `switch-case` operatorları
@@ -63,7 +59,6 @@ if(yas >= 18) {
 }
 
 ```
-
 ---
 
 ## 3. `switch-case` Operatoru
@@ -103,7 +98,6 @@ switch(eded) {
 }
 
 ```
-
 ---
 
 ## 🛠 Praktik Tapşırıqlar
@@ -128,9 +122,6 @@ graph TD
     style E fill:#d4edda,stroke:#155724
     style F fill:#f8d7da,stroke:#721c24
     ```
-
-
-Əlbəttə, bu məlumatları səliqəli və GitHub stilində bir `README.md` faylı formatına saldım. Kodu kopyalayıb birbaşa layihənə əlavə edə bilərsən.
 
 ---
 
@@ -159,7 +150,7 @@ Operatorun ümumi strukturu aşağıdakı kimidir:
 
 ## 🔍 Müqayisəli Nümunə
 
-İki ədəddən böyüyünü tapmaq üçün hər iki üsulun fərqinə baxaq:
+İki ədəddən böyüyünü tapmaq üçün hər iki üsulun fərqi:
 
 ### 1. Klassik `if-else` metodu
 ```c
@@ -200,10 +191,6 @@ printf("%s", (n % 2 == 0) ? "Cutdur" : "Tekdir");
 
 ---
 ```
-
-
-Bütün bu məlumatları strukturlaşdırılmış və səliqəli bir `README.md` faylı halına saldım. Bu format GitHub və ya digər sənədləşmə platformaları üçün tam uyğundur.
-
 ---
 
 ```markdown
@@ -296,6 +283,4 @@ else {
 ## ⚠️ Diqqət edilməli məqam
 Əgər 3-4 dərəcəli iç-içəlik yaranırsa, kodu daha anlaşıqlı etmək üçün `&&`, `||` operatorlarından və ya `switch-case` strukturundan istifadə etmək tövsiyə olunur.
 ```
-
 ---
-

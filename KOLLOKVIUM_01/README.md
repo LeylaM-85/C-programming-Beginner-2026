@@ -29,4 +29,3 @@ Nümunə çıxış: Ödəniləcək məbləğ: 7.50 AZN
 20. `switch-case` ilə ayın neçə gün olduğunu çap edin.
 21. Kurs Seçimi: Kurs nömrəsinə görə adını çap edin (`switch-case`).
 22. Balı (0-100) hərf qiymətinə (A, B, C, D, F) və ya 5-lik sistemə çevirin.
-

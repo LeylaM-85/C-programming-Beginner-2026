@@ -1,4 +1,4 @@
-OLLOKVIUM 1
+KOLLOKVIUM 1
 C Proqramlasdırma kodları
 1. /*Tapşırıq 1: printf() və scanf() ilə sadə giriş-çıxış
 Tapşırıq: İstifadəçidən ad və yaş al, ekrana çap et.*/
@@ -20,5 +20,13 @@ Nümunə çıxış: Zaman: 09:05
 Nümunə giriş: Qiymət: 2.5, Say: 3
 Nümunə çıxış: Ödəniləcək məbləğ: 7.50 AZN
 13. Daxil edilmiş ad və soyadın uzunluğunu tapan proqram qrun.
-14. Daxil edilmiş ad və soyadın uzunluğunu tapan proqram qrun.
-14. Daxil edilmiş ad və soyadın uzunluğunu tapan proqram qrun.
+14. İstifadəçidən daxil edilən iki ədədin böyük olanını tapan proqramı yazın.
+15. İstifadəçidən daxil edilən üç ədədin ən kiçiyini tapan proqramı tərtib edin.
+16. Ternary operator istifadə edərək ədədin cüt/tək olduğunu müəyyən edin.
+17. Nested if-else ilə ədədi mənfi, sıfır, müsbət (kiçik/böyük) kateqoriyalarına bölün.
+18. Yaş Validasiyası: 18 yaşdan kiçikdirsə "Giriş qadağandır!" çap edin.
+19. Hava Proqnozu: Temperatura görə "Soyuq" və ya "Çox isti" çap edin.
+20. `switch-case` ilə ayın neçə gün olduğunu çap edin.
+21. Kurs Seçimi: Kurs nömrəsinə görə adını çap edin (`switch-case`).
+22. Balı (0-100) hərf qiymətinə (A, B, C, D, F) və ya 5-lik sistemə çevirin.
+

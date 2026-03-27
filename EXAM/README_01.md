@@ -17,17 +17,17 @@ C proqramlaşdırma dili
 
 *Məntiqi müqayisələr və qərar vermə strukturları.*
 
-* **28.** İstifadəçidən daxil edilən iki ədədin böyük olanını tapan proqramı yazın.
-* **1, 29.** İstifadəçidən daxil edilən üç ədədin ən böyüyünü tapan proqramı tərtib edin.
-* **30.** İstifadəçidən daxil edilən üç ədədin ən kiçiyini tapan proqramı tərtib edin.
-* **2, 3.** 4 və 5 ədəddən ən böyüyünü tapan proqramı tərtib edin.
-* **85.** Ternary operator istifadə edərək ədədin cüt/tək olduğunu müəyyən edin.
-* **87.** Nested if-else ilə ədədi mənfi, sıfır, müsbət (kiçik/böyük) kateqoriyalarına bölün.
-* **53.** Yaş Validasiyası: 18 yaşdan kiçikdirsə "Giriş qadağandır!" çap edin.
-* **60.** Hava Proqnozu: Temperatura görə "Soyuq" və ya "Çox isti" çap edin.
-* **31.** `switch-case` ilə ayın neçə gün olduğunu çap edin.
-* **73.** Kurs Seçimi: Kurs nömrəsinə görə adını çap edin (`switch-case`).
-* **42, 88.** Balı (0-100) hərf qiymətinə (A, B, C, D, F) və ya 5-lik sistemə çevirin.
+* **28.** İstifadəçidən daxil edilən iki ədədin böyük olanını tapan proqramı yazın.+++
+* **1, 29.** İstifadəçidən daxil edilən üç ədədin ən böyüyünü tapan proqramı tərtib edin.+++
+* **30.** İstifadəçidən daxil edilən üç ədədin ən kiçiyini tapan proqramı tərtib edin.+++
+* **2, 3.** 4 və 5 ədəddən ən böyüyünü tapan proqramı tərtib edin.+++
+* **85.** Ternary operator istifadə edərək ədədin cüt/tək olduğunu müəyyən edin.+++
+* **87.** Nested if-else ilə ədədi mənfi, sıfır, müsbət (kiçik/böyük) kateqoriyalarına bölün.+++
+* **53.** Yaş Validasiyası: 18 yaşdan kiçikdirsə "Giriş qadağandır!" çap edin.+++
+* **60.** Hava Proqnozu: Temperatura görə "Soyuq" və ya "Çox isti" çap edin.+++
+* **31.** `switch-case` ilə ayın neçə gün olduğunu çap edin.+++
+* **73.** Kurs Seçimi: Kurs nömrəsinə görə adını çap edin (`switch-case`).+++
+* **42, 88.** Balı (0-100) hərf qiymətinə (A, B, C, D, F) və ya 5-lik sistemə çevirin.+++
 * **50.** Simvolun sait və ya samit olduğunu yoxlayın.
 * **49.** 3 ədəd arasında ən kiçiyi **yalnız bir if** ilə tapın.
 

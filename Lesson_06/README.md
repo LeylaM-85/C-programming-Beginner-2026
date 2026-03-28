@@ -313,4 +313,3 @@ for(int i = 1; i <= 10; i++) {
    * **Nədir?** İki ədədi qalıqsız bölən ən büyük ədəd.
    * **Məqsəd:** Evklid alqoritmini tətbiq etmək.
 ```
-```

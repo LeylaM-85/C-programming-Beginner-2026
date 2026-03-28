@@ -1,4 +1,3 @@
-
 ---
 
 # Mühazirə 6: İdarəetmə Strukturları (Hissə 2)

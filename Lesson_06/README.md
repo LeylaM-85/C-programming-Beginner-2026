@@ -1,5 +1,4 @@
 
-```markdown
 # Mühazirə 6: İdarəetmə Strukturları (Hissə 2)
 
 Dövrlər eyni əməliyyatların müəyyən şərt daxilində təkrarən yerinə yetirilməsi üçün istifadə olunur. C dilində üç əsas dövr operatoru mövcuddur: for, while və do-while.

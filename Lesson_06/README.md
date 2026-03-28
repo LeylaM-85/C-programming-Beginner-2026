@@ -235,123 +235,23 @@ for(int i = 1; i <= 10; i++) {
 }
 Praktik Tapşırıqlar:
 1.	Faktorial hesablama (for)
-2.	Fibonacci seriyası (while)
-3.	Sadə ədəd yoxlama
-4.	Piramida çap etmə (nested loops)
-5.	ƏBOB və ƏKOB
-1. Faktorial nədir?
+Faktorial nədir?
 Riyaziyyatda verilmiş müsbət tam ədədin özünə qədər olan bütün ədədlərə hasilidir. Məsələn, $5! = 5 \times 4 \times 3 \times 2 \times 1 = 120$.
 •	Məqsəd: Dövr (loop) vasitəsilə ədədləri bir-birinə vurmağı öyrənmək.
-2. Fibonacci ardıcıllığı nədir?
+2.	Fibonacci seriyası (while)
+Fibonacci ardıcıllığı nədir?
 Bu ardıcıllıqda hər bir ədəd özündən əvvəlki iki ədədin cəminə bərabərdir:  0, 1, 1, 2, 3, 5, 8, 13...
 •	Məqsəd: Dəyişənlərin qiymətini bir-biri ilə necə sürüşdürməyi (temp dəyişəni vasitəsilə) başa düşmək.
-3. Sadə ədəd (Prime number) nədir?
+3.	Sadə ədəd yoxlama
+Sadə ədəd (Prime number) nədir?
 Yalnız özünə və 1-ə bölünən, 1-dən böyük ədədlərdir (məsələn: 2, 3, 5, 7, 11...).
 •	Məqsəd: Qalıqlı bölməni (%) və if şərti ilə ədədin böləninin olub-olmadığını yoxlamağı öyrənmək.
-4. Piramida nədir?
+4.	Piramida çap etmə (nested loops)
+Piramida nədir?
 Burada məqsəd ekranda ulduzlarla (*) simmetrik bir üçbucaq forması yaratmaqdır.
 •	Məqsəd: İç-içe dövrlərin (nested loops) işləmə prinsipini anlamaq: bir dövr boşluqları qoyur, digəri isə ulduzları yan-yana düzür.
-5. ƏBOB (Ən Böyük Ortaq Bölən) nədir?
+5.	ƏBOB və ƏKOB
+ƏBOB (Ən Böyük Ortaq Bölən) nədir?
 İki ədədin hər ikisini də qalıqsız bölən ən böyük ədəddir. Məsələn, 12 və 18 üçün ƏBOB 6-dır.
 •	Məqsəd: Evklid alqoritmini (qalıqla bölmə yolu ilə sürətli tapma) tətbiq etmək.
 ________________________________________
-Faktorial Hesablanması
-C
-#include <stdio.h>
-
-int main() {
-    int n, fakt = 1;
-    printf("Faktorialı tapılacaq ədədi daxil edin: ");
-    scanf("%d", &n);
-    
-    for(int i = 1; i <= n; i++) {
-        fakt *= i;
-    }
-    printf("%d! = %d\n", n, fakt);
-    return 0;
-}
-Fibonacci Ardıcıllığı
-C
-#include <stdio.h>
-
-int main() {
-    int n, a = 0, b = 1;
-    printf("Neçə Fibonacci ədədi göstərilsin: ");
-    scanf("%d", &n);
-    
-    for(int i = 0; i < n; i++) {
-        printf("%d ", a);
-        int temp = a + b;
-        a = b;
-        b = temp;
-    }
-    printf("\n");
-    return 0;
-}
-Sadə və ya Mürəkkəb Ədəd
-C
-#include <stdio.h>
-
-int main() {
-    int n, sade = 1;
-    printf("Yoxlanılacaq ədədi daxil edin: ");
-    scanf("%d", &n);
-    
-    if(n <= 1) {
-        sade = 0;
-    } else {
-        for(int i = 2; i * i <= n; i++) {
-            if(n % i == 0) {
-                sade = 0;
-                break;
-            }
-        }
-    }
-    
-    if(sade)
-        printf("%d sadə ədəddir.\n", n);
-    else
-        printf("%d mürəkkəb ədəddir.\n", n);
-        
-    return 0;
-}
-Ulduzlarla Piramida
-C
-#include <stdio.h>
-
-int main() {
-    int n = 5; // Piramidanın hündürlüyü
-    for(int i = 1; i <= n; i++) {
-        // Boşluqlar üçün
-        for(int j = 1; j <= n - i; j++) {
-            printf(" ");
-        }
-        // Ulduzlar üçün
-        for(int k = 1; k <= 2 * i - 1; k++) {
-            printf("*");
-        }
-        printf("\n");
-    }
-    return 0;
-}
-ƏBOB-un Tapılması
-C
-#include <stdio.h>
-
-int main() {
-    int a, b;
-    printf("İki ədəd daxil edin: ");
-    scanf("%d %d", &a, &b);
-    
-    int num1 = a, num2 = b; // Orijinal ədədləri saxlamaq üçün
-    
-    while(b != 0) {
-        int temp = b;
-        b = a % b;
-        a = temp;
-    }
-    printf("%d və %d üçün ƏBOB: %d\n", num1, num2, a);
-    return 0;
-}
-________________________________________
-

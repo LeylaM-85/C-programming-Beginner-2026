@@ -1,8 +1,4 @@
-Salam, Leyla müəllimə. Təqdim etdiyiniz bütün mühazirə materiallarını və əlavələri (Ternary operator, Nested if-else və s.) vahid, ardıcıl və Word sənədinə asanlıqla köçürə biləcəyiniz peşəkar bir formata saldım. 
 
-Budur sizin tam, birləşdirilmiş mühazirə sənədiniz:
-
-***
 
 # 🎓 C Proqramlaşdırma Dili: Mühazirə Materialları Toplusu (Dərs 1 - 5)
 

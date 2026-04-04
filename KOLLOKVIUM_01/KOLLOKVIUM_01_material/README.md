@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ***
+=======
+
+>>>>>>> fde51e391ae7ed9011ed917e3f9cc1cc84c8f60f
 
 # 🎓 C Proqramlaşdırma Dili: Mühazirə Materialları Toplusu (Dərs 1 - 5)
 

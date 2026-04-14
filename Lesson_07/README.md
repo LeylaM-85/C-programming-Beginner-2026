@@ -80,3 +80,85 @@ int faktorial(int n) {
 2.  **Fibonacci (Rekursiv):** $F(n) = F(n-1) + F(n-2)$ düsturu ilə hesablanır.
 3.  **Palindrom:** Həm sağdan, həm soldan eyni oxunan söz və ya ədədlər (məs: "madam", 121).
 ---
+
+/* --- MÜHAZIRƏ 7: FUNKSIYALAR --- */
+
+// Tapşırıq 1: Dərəcə
+/*
+int power(int esas, int derece) {
+    int netice = 1;
+    for(int i = 0; i < derece; i++) {
+        netice *= esas;
+    }
+    return netice;
+}
+
+int main() {
+    printf("%d\n", power(2, 10));  // 1024
+    return 0;
+}
+*/
+
+// Tapşırıq 2: Armstrong ədədi
+/*
+#include <math.h>
+
+int armstrong_mu(int n) {
+    int cemm = 0, temp = n, reqem_sayi = 0;
+    
+    // Rəqəm sayı
+    while(temp != 0) {
+        reqem_sayi++;
+        temp /= 10;
+    }
+    
+    temp = n;
+    while(temp != 0) {
+        int reqem = temp % 10;
+        cemm += pow(reqem, reqem_sayi);
+        temp /= 10;
+    }
+    
+    return (cemm == n);
+}
+
+int main() {
+    printf("%d\n", armstrong_mu(153));  // 1^3 + 5^3 + 3^3 = 153
+    return 0;
+}
+*/
+
+// Tapşırıq 3: Fibonacci (rekursiv)
+/*
+int fib(int n) {
+    if(n <= 1) return n;
+    return fib(n-1) + fib(n-2);
+}
+
+int main() {
+    for(int i = 0; i < 10; i++) {
+        printf("%d ", fib(i));
+    }
+    return 0;
+}
+*/
+
+// Tapşırıq 4: Palindrom
+/*
+#include <string.h>
+
+int palindrom_mu(char str[]) {
+    int uzunluq = strlen(str);
+    for(int i = 0; i < uzunluq/2; i++) {
+        if(str[i] != str[uzunluq-1-i]) return 0;
+    }
+    return 1;
+}
+
+int main() {
+    printf("%d\n", palindrom_mu("madam"));  // 1
+    printf("%d\n", palindrom_mu("hello"));  // 0
+    return 0;
+}
+*/
+

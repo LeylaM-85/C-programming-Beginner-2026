@@ -28,7 +28,17 @@ qayıdan_tip funksiya_adı(parametrlər) {
     ```
 * **c) Parametrsiz, return var:** Məlumat almır, lakin hesabladığı nəticəni geri qaytarır.
     ```c
-    int random_eded() { return rand() % 100; }
+    #include <stdio.h>
+#include <stdlib.h>
+
+int random_eded() { 
+    return rand() % 100; 
+}
+
+int main() {
+    printf("Eded: %d", random_eded());
+    return 0;
+}
     ```
 * **d) Parametrli, return var:** Həm məlumat alır, həm də emal edib nəticəni proqrama qaytarır.
     ```c
@@ -80,8 +90,6 @@ int faktorial(int n) {
 2.  **Fibonacci (Rekursiv):** $F(n) = F(n-1) + F(n-2)$ düsturu ilə hesablanır.
 3.  **Palindrom:** Həm sağdan, həm soldan eyni oxunan söz və ya ədədlər (məs: "madam", 121).
 ---
-
-Aşağıda təqdim etdiyiniz kod nümunələrini peşəkar şəkildə strukturlaşdırılmış, izahlı və Markdown formatına uyğunlaşdırılmış `README.md` faylı formasında hazırladım.
 
 -----
 

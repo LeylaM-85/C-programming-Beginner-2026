@@ -1,110 +1,89 @@
-
 ---
 
-# Mühazirə 7: Funksiyalar və Modul Proqramlaşdırma
+# 📘 Mühazirə 7: Funksiyalar və Modul Proqramlaşdırma
 
-Funksiyalar proqramın müəyyən bir hissəsini yerinə yetirən və təkrar istifadə oluna bilən kod bloklarıdır. Proqramı kiçik hissələrə (modullara) bölməklə həm oxunaqlığı artırır, həm də xətaları tapmağı asanlaşdırır.
+Bu qovluqda C proqramlaşdırma dilində funksiyaların yaradılması, növləri və praktiki tətbiqləri (rekursiya, riyazi hesablamalar) əks olunmuşdur.
 
-## 1. Funksiyanın Tərifi (Səhifə 33)
-Funksiya təyin edilərkən onun hansı tip dəyər qaytaracağı, adı və qəbul etdiyi parametrlər qeyd olunur.
+## 📌 Funksiya Növləri 
 
+C dilində funksiyalar dörd formada təzahür edir. 
+
+### 1. Parametrsiz və Geri Dəyər Qaytarmayan (`void`)
+Heç bir giriş məlumatı almır və nəticə qaytarmır.
 ```c
-qayıdan_tip funksiya_adı(parametrlər) {
-    // yerinə yetiriləcək kodlar
-    return dəyər; // əgər qayıdan_tip void deyilsə
+#include <stdio.h>
+
+void salam_ver() { 
+    printf("Salam! Funksiya ugurla cagirildi.\n"); 
+}
+
+int main() {
+    salam_ver(); 
+    return 0;
 }
 ```
 
-## 2. Funksiya Növləri
+### 2. Parametrli və Geri Dəyər Qaytarmayan
+Məlumat qəbul edir, lakin nəticəni funksiyanın daxilində çap edir.
+```c
+#include <stdio.h>
 
+void cem_cap_et(int a, int b) { 
+    printf("Iki ededin cemi: %d\n", a + b); 
+}
 
-* **a) Parametrsiz, return yoxdur:** Heç bir məlumat almır və geri qaytarmır.
-    ```c
-    void salam() { printf("Salam!\n"); }
-    ```
-* **b) Parametrli, return yoxdur:** Məlumat qəbul edir, lakin nəticəni geri qaytarmır (məsələn, birbaşa ekrana çap edir).
-    ```c
-    void topla(int a, int b) { printf("Cəm: %d\n", a + b); }
-    ```
-* **c) Parametrsiz, return var:** Məlumat almır, lakin hesabladığı nəticəni geri qaytarır.
-    ```c
-    #include <stdio.h>
+int main() {
+    cem_cap_et(10, 20); 
+    return 0;
+}
+```
+
+### 3. Parametrsiz və Geri Dəyər Qaytaran
+Giriş parametri yoxdur, lakin hesabladığı dəyəri `main`-ə göndərir.
+```c
+#include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
-int random_eded() { 
-    return rand() % 100; 
+int sansli_eded() { 
+    return rand() % 100; // 0-99 arasi
 }
 
 int main() {
-    printf("Eded: %d", random_eded());
+    srand(time(0)); 
+    printf("Sizin sansli edediniz: %d\n", sansli_eded());
     return 0;
-}
-    ```
-* **d) Parametrli, return var:** Həm məlumat alır, həm də emal edib nəticəni proqrama qaytarır.
-    ```c
-    int carp(int a, int b) { return a * b; }
-    ```
-
-## 3. Funksiya Elanı (Prototype) (Səhifə 35)
-Əgər funksiyanı `main()` funksiyasından sonra yazırsınızsa, proqramın əvvəlində onu "tanıtmalısınız".
-
-```c
-int topla(int, int); // Prototip (Elan)
-
-int main() {
-    int netice = topla(5, 3);
-    return 0;
-}
-
-int topla(int a, int b) { return a + b; } // Təyin
-```
-
-## 4. Dəyər üzrə ötürmə (Pass by Value)
-C dilində funksiyaya arqument ötürüləndə onun **kopyası** ötürülür. Funksiya daxilində dəyişən üzərində edilən dəyişiklik ana proqramdakı (main) orijinal dəyişənə təsir etmir.
-
-```c
-void deyis(int x) { x = 100; }
-
-int main() {
-    int a = 50;
-    deyis(a);
-    printf("%d", a); // Çıxış: 50 (Çünki funksiya yalnız kopyanı dəyişdi)
 }
 ```
 
-## 5. Rekursiya (Səhifə 41)
-Funksiyanın öz-özünü çağırmasıdır. Rekursiv funksiyalarda mütləq bir "dayanma şərti" olmalıdır, yoxsa sonsuz dövr yaranar.
-**Nümunə (Faktorial):** $5! = 5 \times 4!$ məntiqi ilə işləyir.
-
+### 4. Parametrli və Geri Dəyər Qaytaran (Ən çox istifadə edilən)
+Məlumat alır, emal edir və nəticəni geri qaytarır.
 ```c
-int faktorial(int n) {
-    if(n <= 1) return 1; // Dayanma şərti
-    return n * faktorial(n - 1);
+#include <stdio.h>
+
+int hasil(int x, int y) { 
+    return x * y; 
+}
+
+int main() {
+    int netice = hasil(5, 8);
+    printf("Hasil: %d\n", netice);
+    return 0;
 }
 ```
 
 ---
-## Praktik Tapşırıqlar üçün İzahlar
 
-1.  **Armstrong Ədədi:** Əgər ədədin rəqəmlərinin, rəqəm sayı qədər dərəcədən qüvvətləri cəmi özünə bərabərdirsə, bu Armstrong ədədidir (məs: $153 = 1^3 + 5^3 + 3^3$).
-2.  **Fibonacci (Rekursiv):** $F(n) = F(n-1) + F(n-2)$ düsturu ilə hesablanır.
-3.  **Palindrom:** Həm sağdan, həm soldan eyni oxunan söz və ya ədədlər (məs: "madam", 121).
----
+## 🛠 Praktik Tapşırıqların Həlli
 
------
+Bu bölmədə mühazirədə qeyd olunan mürəkkəb məsələlərin tam və izahlı həlləri verilmişdir.
 
-# Mühazirə 7: Funksiyalar üzrə Praktik Tapşırıqların kodları
-
------
-
-### 1\. Ədədin dərəcəsinin hesablanması
-
-Bu funksiya verilmiş əsasın (base) göstərilən dərəcəyə (power) qaldırılmasını `for` dövrü vasitəsilə həyata keçirir.
+### 🔢 Ədədin Dərəcəsinin Hesablanması
 
 ```c
 #include <stdio.h>
 
-int power(int esas, int derece) {
+int quvvet_tap(int esas, int derece) {
     int netice = 1;
     for(int i = 0; i < derece; i++) {
         netice *= esas;
@@ -113,100 +92,78 @@ int power(int esas, int derece) {
 }
 
 int main() {
-    printf("Nəticə (2^10): %d\n", power(2, 10));  // Gözlənilən çıxış: 1024
+    printf("3 ustu 4 = %d\n", quvvet_tap(3, 4));
     return 0;
 }
 ```
 
------
-
-### 2\. Armstrong ədədinin yoxlanılması
-
-Əgər ədədin rəqəmlərinin, rəqəm sayı qədər dərəcədən qüvvətləri cəmi özünə bərabərdirsə, bu Armstrong ədədidir.
-*Məsələn:* $153 = 1^3 + 5^3 + 3^3$
-
+### ✨ Armstrong Ədədinin Yoxlanılması
+*Qeyd:* Armstrong ədədi rəqəmlərinin kubları (və ya rəqəm sayı qədər qüvvəti) cəmi özünə bərabər olan ədəddir ($153, 370$ və s.).
 ```c
 #include <stdio.h>
 #include <math.h>
 
-int armstrong_mu(int n) {
-    int cemm = 0, temp = n, reqem_sayi = 0;
+int armstrong_yoxla(int n) {
+    int cem = 0, temp = n, reqem_sayi = 0;
     
-    // 1. Addım: Rəqəm sayını tapmaq
+    // Reqem sayini tapiriq
     int t = n;
-    while(t != 0) {
-        reqem_sayi++;
-        t /= 10;
-    }
+    while(t != 0) { reqem_sayi++; t /= 10; }
     
-    // 2. Addım: Hər bir rəqəmin qüvvətlər cəmini hesablamaq
+    // Her reqemin quvvetini cemleyirik
     temp = n;
     while(temp != 0) {
         int reqem = temp % 10;
-        cemm += pow(reqem, reqem_sayi);
+        cem += pow(reqem, reqem_sayi);
         temp /= 10;
     }
-    
-    // 3. Addım: Nəticəni orijinal ədədlə müqayisə etmək
-    return (cemm == n);
+    return (cem == n);
 }
 
 int main() {
-    if(armstrong_mu(153))
-        printf("153 Armstrong ədədidir.\n");
-    else
-        printf("153 Armstrong ədədi deyil.\n");
+    int eded = 153;
+    if(armstrong_yoxla(eded)) printf("%d Armstrongdur.\n", eded);
+    else printf("%d Armstrong deyil.\n", eded);
     return 0;
 }
 ```
 
------
-
-### 3\. Fibonacci seriyası (Rekursiv)
-
-Funksiyanın özünü çağırması (rekursiya) vasitəsilə Fibonacci ardıcıllığının $n$-ci həddini tapır.
+### 🌀 Fibonacci Seriyası (Rekursiya ilə)
 
 ```c
 #include <stdio.h>
 
-int fib(int n) {
-    if(n <= 1) return n; // Dayanma şərti
-    return fib(n-1) + fib(n-2);
+int fibonacci(int n) {
+    if(n <= 1) return n;
+    return fibonacci(n-1) + fibonacci(n-2);
 }
 
 int main() {
-    printf("Fibonacci seriyası (ilk 10 hədd):\n");
+    printf("Fibonacci (ilk 10 element): ");
     for(int i = 0; i < 10; i++) {
-        printf("%d ", fib(i));
+        printf("%d ", fibonacci(i));
     }
     return 0;
 }
 ```
 
------
-
-### 4\. Palindrom sözün yoxlanılması
-
-Verilmiş simvollar massivinin (string) həm soldan, həm də sağdan eyni oxunub-oxunmadığını yoxlayır.
-
+### 🔁 Palindrom Söz Yoxlanılması
 ```c
 #include <stdio.h>
 #include <string.h>
 
-int palindrom_mu(char str[]) {
-    int uzunluq = strlen(str);
+int palindrom_yoxla(char soz[]) {
+    int uzunluq = strlen(soz);
     for(int i = 0; i < uzunluq / 2; i++) {
-        // Qarşılıqlı simvollar fərqlidirsə, palindrom deyil
-        if(str[i] != str[uzunluq - 1 - i]) return 0;
+        if(soz[i] != soz[uzunluq - 1 - i]) return 0; // Palindrom deyil
     }
-    return 1;
+    return 1; // Palindromdur
 }
 
 int main() {
-    printf("madam: %s\n", palindrom_mu("madam") ? "Palindromdur" : "Deyil");
-    printf("hello: %s\n", palindrom_mu("hello") ? "Palindromdur" : "Deyil");
+    char s[] = "radar";
+    if(palindrom_yoxla(s)) printf("'%s' palindromdur.\n", s);
+    else printf("'%s' palindrom deyil.\n", s);
     return 0;
 }
 ```
-
------

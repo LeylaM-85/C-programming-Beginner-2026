@@ -81,10 +81,21 @@ int faktorial(int n) {
 3.  **Palindrom:** Həm sağdan, həm soldan eyni oxunan söz və ya ədədlər (məs: "madam", 121).
 ---
 
-/* --- MÜHAZIRƏ 7: FUNKSIYALAR --- */
+Aşağıda təqdim etdiyiniz kod nümunələrini peşəkar şəkildə strukturlaşdırılmış, izahlı və Markdown formatına uyğunlaşdırılmış `README.md` faylı formasında hazırladım.
 
-// Tapşırıq 1: Dərəcə
-/*
+-----
+
+# Mühazirə 7: Funksiyalar üzrə Praktik Tapşırıqların kodları
+
+-----
+
+### 1\. Ədədin dərəcəsinin hesablanması
+
+Bu funksiya verilmiş əsasın (base) göstərilən dərəcəyə (power) qaldırılmasını `for` dövrü vasitəsilə həyata keçirir.
+
+```c
+#include <stdio.h>
+
 int power(int esas, int derece) {
     int netice = 1;
     for(int i = 0; i < derece; i++) {
@@ -94,24 +105,33 @@ int power(int esas, int derece) {
 }
 
 int main() {
-    printf("%d\n", power(2, 10));  // 1024
+    printf("Nəticə (2^10): %d\n", power(2, 10));  // Gözlənilən çıxış: 1024
     return 0;
 }
-*/
+```
 
-// Tapşırıq 2: Armstrong ədədi
-/*
+-----
+
+### 2\. Armstrong ədədinin yoxlanılması
+
+Əgər ədədin rəqəmlərinin, rəqəm sayı qədər dərəcədən qüvvətləri cəmi özünə bərabərdirsə, bu Armstrong ədədidir.
+*Məsələn:* $153 = 1^3 + 5^3 + 3^3$
+
+```c
+#include <stdio.h>
 #include <math.h>
 
 int armstrong_mu(int n) {
     int cemm = 0, temp = n, reqem_sayi = 0;
     
-    // Rəqəm sayı
-    while(temp != 0) {
+    // 1. Addım: Rəqəm sayını tapmaq
+    int t = n;
+    while(t != 0) {
         reqem_sayi++;
-        temp /= 10;
+        t /= 10;
     }
     
+    // 2. Addım: Hər bir rəqəmin qüvvətlər cəmini hesablamaq
     temp = n;
     while(temp != 0) {
         int reqem = temp % 10;
@@ -119,46 +139,66 @@ int armstrong_mu(int n) {
         temp /= 10;
     }
     
+    // 3. Addım: Nəticəni orijinal ədədlə müqayisə etmək
     return (cemm == n);
 }
 
 int main() {
-    printf("%d\n", armstrong_mu(153));  // 1^3 + 5^3 + 3^3 = 153
+    if(armstrong_mu(153))
+        printf("153 Armstrong ədədidir.\n");
+    else
+        printf("153 Armstrong ədədi deyil.\n");
     return 0;
 }
-*/
+```
 
-// Tapşırıq 3: Fibonacci (rekursiv)
-/*
+-----
+
+### 3\. Fibonacci seriyası (Rekursiv)
+
+Funksiyanın özünü çağırması (rekursiya) vasitəsilə Fibonacci ardıcıllığının $n$-ci həddini tapır.
+
+```c
+#include <stdio.h>
+
 int fib(int n) {
-    if(n <= 1) return n;
+    if(n <= 1) return n; // Dayanma şərti
     return fib(n-1) + fib(n-2);
 }
 
 int main() {
+    printf("Fibonacci seriyası (ilk 10 hədd):\n");
     for(int i = 0; i < 10; i++) {
         printf("%d ", fib(i));
     }
     return 0;
 }
-*/
+```
 
-// Tapşırıq 4: Palindrom
-/*
+-----
+
+### 4\. Palindrom sözün yoxlanılması
+
+Verilmiş simvollar massivinin (string) həm soldan, həm də sağdan eyni oxunub-oxunmadığını yoxlayır.
+
+```c
+#include <stdio.h>
 #include <string.h>
 
 int palindrom_mu(char str[]) {
     int uzunluq = strlen(str);
-    for(int i = 0; i < uzunluq/2; i++) {
-        if(str[i] != str[uzunluq-1-i]) return 0;
+    for(int i = 0; i < uzunluq / 2; i++) {
+        // Qarşılıqlı simvollar fərqlidirsə, palindrom deyil
+        if(str[i] != str[uzunluq - 1 - i]) return 0;
     }
     return 1;
 }
 
 int main() {
-    printf("%d\n", palindrom_mu("madam"));  // 1
-    printf("%d\n", palindrom_mu("hello"));  // 0
+    printf("madam: %s\n", palindrom_mu("madam") ? "Palindromdur" : "Deyil");
+    printf("hello: %s\n", palindrom_mu("hello") ? "Palindromdur" : "Deyil");
     return 0;
 }
-*/
+```
 
+-----

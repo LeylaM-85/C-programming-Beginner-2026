@@ -79,6 +79,4 @@ int faktorial(int n) {
 1.  **Armstrong Ədədi:** Əgər ədədin rəqəmlərinin, rəqəm sayı qədər dərəcədən qüvvətləri cəmi özünə bərabərdirsə, bu Armstrong ədədidir (məs: $153 = 1^3 + 5^3 + 3^3$).
 2.  **Fibonacci (Rekursiv):** $F(n) = F(n-1) + F(n-2)$ düsturu ilə hesablanır.
 3.  **Palindrom:** Həm sağdan, həm soldan eyni oxunan söz və ya ədədlər (məs: "madam", 121).
-4.  **Massiv Tərsinə Çevrilməsi:** Birinci elementlə sonuncunu, ikinci ilə sondan əvvəlkini yerini dəyişməklə (`swap`) həyata keçirilir.
-
 ---
